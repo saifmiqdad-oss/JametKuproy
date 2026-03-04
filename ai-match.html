@@ -3,11 +3,16 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Dashboard</title>
+<title>AI Skill Match</title>
 <script src="https://cdn.tailwindcss.com"></script>
+<script>
+function match(){
+document.getElementById("result").innerHTML="Best match: Aiko (Japanese Tutor)"
+}
+</script>
 </head>
 
-<body class="bg-gray-100">
+<body class="bg-gray-50">
 
 <header class="bg-white shadow">
 <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between">
@@ -24,28 +29,17 @@
 </header>
 
 
-<div class="max-w-6xl mx-auto py-16">
+<div class="max-w-xl mx-auto py-20">
 
-<h1 class="text-3xl font-bold mb-8">Dashboard Analytics</h1>
+<h1 class="text-3xl font-bold mb-6">AI Skill Matching</h1>
 
-<div class="grid md:grid-cols-3 gap-6">
+<input class="w-full border p-3 rounded mb-4" placeholder="Skill you want to learn">
 
-<div class="bg-white p-6 rounded shadow">
-<h2 class="font-bold">Lessons Completed</h2>
-<p class="text-2xl">12</p>
-</div>
+<button onclick="match()" class="bg-indigo-600 text-white px-6 py-2 rounded">
+Find Match
+</button>
 
-<div class="bg-white p-6 rounded shadow">
-<h2 class="font-bold">Skill Swaps</h2>
-<p class="text-2xl">8</p>
-</div>
-
-<div class="bg-white p-6 rounded shadow">
-<h2 class="font-bold">Rating</h2>
-<p class="text-2xl">4.9 ⭐</p>
-</div>
-
-</div>
+<div id="result" class="mt-6 text-lg"></div>
 
 </div>
 </body>

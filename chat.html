@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Chat</title>
+<script src="https://cdn.tailwindcss.com"></script>
+
+<script>
+function sendMessage(){
+let input=document.getElementById("msg")
+let chat=document.getElementById("chat")
+
+if(input.value!=""){
+let m=document.createElement("p")
+m.innerHTML="<b>You:</b> "+input.value
+chat.appendChild(m)
+
+setTimeout(function(){
+let r=document.createElement("p")
+r.innerHTML="<b>Teacher:</b> Great! Let's continue learning."
+chat.appendChild(r)
+chat.scrollTop=chat.scrollHeight
+},800)
+
+input.value=""
+}
+}
+</script>
+
+</head>
+
+<body class="bg-gray-100">
+
+<div class="max-w-3xl mx-auto py-16">
+
+<h1 class="text-3xl font-bold mb-6">Learning Chat</h1>
+
+<div id="chat" class="bg-white p-6 rounded-xl shadow h-80 overflow-y-scroll mb-4">
+<p><b>Aiko:</b> Hello! Ready for today's lesson?</p>
+</div>
+
+<div class="flex gap-2">
+<input id="msg" class="flex-1 border p-2 rounded">
+<button onclick="sendMessage()" class="bg-indigo-600 text-white px-6 rounded">Send</button>
+</div>
+
+</div>
+</body>
+</html>
