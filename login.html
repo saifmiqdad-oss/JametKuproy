@@ -1,0 +1,29 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Login</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+function login(){
+window.location="dashboard.html"
+}
+</script>
+</head>
+
+<body class="bg-gray-100 flex items-center justify-center h-screen">
+
+<div class="bg-white p-8 rounded-xl shadow w-80">
+
+<h2 class="text-2xl font-bold mb-6 text-center">Login</h2>
+
+<input class="w-full p-2 border rounded mb-3" placeholder="Email">
+<input class="w-full p-2 border rounded mb-4" type="password" placeholder="Password">
+
+<button onclick="login()" class="w-full bg-indigo-600 text-white py-2 rounded">Login</button>
+
+</div>
+
+</body>
+</html>
